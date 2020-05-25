@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  maaz:
+    build: ./appp
+    hostname: maaz
+    container_name: rides
+
+    image: digitalocean.com/flask-python:latest
+    restart: unless-stopped
+    environment:
+      TEAM_NAME: CC_1395_1632
+    ports:
+      - "80:80"
+    volumes:
+      - appdata:/var/www/rides/
+
+
+volumes:
+  appdata:
+    driver: local
