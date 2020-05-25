@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  flask:
+    build: ./app
+    hostname: flask
+    container_name: users
+    image: flask-python:latest
+    restart: unless-stopped
+    environment:
+      TEAM_NAME: CC_1395_1632
+    ports:
+      - "80:80"
+    volumes:
+      - appdata:/var/www/users/
+
+volumes:
+  appdata:
+    driver: local
