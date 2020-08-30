@@ -1,2 +1,1 @@
-# Cloud-Computing
-Ride share project
+#Cloud computing project
